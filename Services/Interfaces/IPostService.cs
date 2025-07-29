@@ -7,8 +7,8 @@ namespace Services.Interfaces
     {
         IEnumerable<Post> GetAllPosts();
         Post GetPostById(int id);
-        Post CreatePost(PostDtoForCreation post);
-        Post UpdatePost(int id, PostDtoForCreation post);
+        Post CreatePost(PostDto post);
+        Post UpdatePost(int id, PostDto post);
         void DeletePost(int postId);
     }
 }

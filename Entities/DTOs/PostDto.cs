@@ -1,6 +1,7 @@
 ﻿namespace Entities.DTOs
 {
-    public class PostDtoForCreation
+    public class PostDto
+
     {
         public string? Title { get; set; }
         public string? Content { get; set; }

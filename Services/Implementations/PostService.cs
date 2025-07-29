@@ -25,7 +25,7 @@ namespace Services.Implementations
                 throw new ArgumentNullException(nameof(post), "Post cannot be null");
             return post;
         }
-        public Post CreatePost(PostDtoForCreation postDto)
+        public Post CreatePost(PostDto postDto)
         {
             if (postDto is null)
                 throw new ArgumentNullException(nameof(postDto), "Post cannot be null");
@@ -40,7 +40,7 @@ namespace Services.Implementations
             _manager.Save();
             return post;
         }
-        public Post UpdatePost(int id, PostDtoForCreation postDto)
+        public Post UpdatePost(int id, PostDto postDto)
         {
             var entity = _manager.Post.FindPostById(id).SingleOrDefault();
             if (entity is null)

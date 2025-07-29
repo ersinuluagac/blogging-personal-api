@@ -30,13 +30,13 @@ namespace WebApi.Controllers
             return Ok(post);
         }
         [HttpPost]
-        public IActionResult CreatePost([FromBody] PostDtoForCreation postDto)
+        public IActionResult CreatePost([FromBody] PostDto postDto)
         {
             var post = _serviceManager.PostService.CreatePost(postDto);
             return Ok(post);
         }
         [HttpPut("{id}")]
-        public IActionResult UpdatePost([FromRoute(Name = "id")] int id, [FromBody] PostDtoForCreation postDto)
+        public IActionResult UpdatePost([FromRoute(Name = "id")] int id, [FromBody] PostDto postDto)
         {
             var post = _serviceManager.PostService.UpdatePost(id, postDto);
             return Ok(post);
