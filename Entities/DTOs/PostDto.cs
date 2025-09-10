@@ -1,11 +1,11 @@
 ﻿namespace Entities.DTOs
 {
-    public class PostDto
+    public record PostDto
 
     {
-        public string? Title { get; set; }
-        public string? Content { get; set; }
-        public string? Category { get; set; }
-        public string[]? Tags { get; set; }
+        public string? Title { get; init; }
+        public string? Content { get; init; }
+        public string? Category { get; init; }
+        public string[]? Tags { get; init; }
     }
 }
